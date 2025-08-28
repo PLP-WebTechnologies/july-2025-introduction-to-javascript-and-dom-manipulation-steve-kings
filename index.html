@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals - Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>📚 Student Dashboard</h1>
+            <p>Mastering JavaScript Fundamentals - Power Learn Project</p>
+            <div id="welcome-message"></div>
+        </header>
+
+        <!-- Part 1: JavaScript Basics Section -->
+        <section class="section basics-section">
+            <h2>🎯 Part 1: JavaScript Basics</h2>
+            <div class="card">
+                <h3>Student Information</h3>
+                <div class="input-group">
+                    <label for="student-name">Your Name:</label>
+                    <input type="text" id="student-name" placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="student-age">Your Age:</label>
+                    <input type="number" id="student-age" placeholder="Enter your age">
+                </div>
+                <button onclick="processStudentInfo()">Process Info</button>
+                <div id="student-output" class="output"></div>
+            </div>
+        </section>
+
+        <!-- Part 2: Functions Section -->
+        <section class="section functions-section">
+            <h2>❤️ Part 2: JavaScript Functions</h2>
+            <div class="card">
+                <h3>Grade Calculator</h3>
+                <div class="input-group">
+                    <label for="grades-input">Enter grades (comma-separated):</label>
+                    <input type="text" id="grades-input" placeholder="85, 92, 78, 95, 88">
+                </div>
+                <button onclick="calculateGrades()">Calculate Average</button>
+                <div id="grade-output" class="output"></div>
+            </div>
+
+            <div class="card">
+                <h3>Text Formatter</h3>
+                <div class="input-group">
+                    <label for="text-input">Enter text to format:</label>
+                    <input type="text" id="text-input" placeholder="hello world">
+                </div>
+                <div class="button-group">
+                    <button onclick="formatText('uppercase')">UPPERCASE</button>
+                    <button onclick="formatText('lowercase')">lowercase</button>
+                    <button onclick="formatText('title')">Title Case</button>
+                    <button onclick="formatText('reverse')">esreveR</button>
+                </div>
+                <div id="text-output" class="output"></div>
+            </div>
+        </section>
+
+        <!-- Part 3: Loops Section -->
+        <section class="section loops-section">
+            <h2>🔁 Part 3: JavaScript Loops</h2>
+            <div class="card">
+                <h3>Number Pattern Generator</h3>
+                <div class="input-group">
+                    <label for="pattern-number">Enter a number (1-10):</label>
+                    <input type="number" id="pattern-number" min="1" max="10" placeholder="5">
+                </div>
+                <button onclick="generatePatterns()">Generate Patterns</button>
+                <div id="pattern-output" class="output"></div>
+            </div>
+
+            <div class="card">
+                <h3>Subject List Manager</h3>
+                <div class="input-group">
+                    <label for="subject-input">Add a subject:</label>
+                    <input type="text" id="subject-input" placeholder="Mathematics">
+                </div>
+                <button onclick="addSubject()">Add Subject</button>
+                <button onclick="displayAllSubjects()">Show All Subjects</button>
+                <button onclick="clearSubjects()">Clear All</button>
+                <div id="subjects-output" class="output"></div>
+            </div>
+        </section>
+
+        <!-- Part 4: DOM Manipulation Section -->
+        <section class="section dom-section">
+            <h2>🌐 Part 4: DOM Manipulation</h2>
+            <div class="card">
+                <h3>Interactive Color Changer</h3>
+                <button id="color-btn">Change Background Color</button>
+                <button id="reset-color-btn">Reset Color</button>
+                <div id="color-info" class="output"></div>
+            </div>
+
+            <div class="card">
+                <h3>Dynamic Todo List</h3>
+                <div class="input-group">
+                    <label for="todo-input">Add a task:</label>
+                    <input type="text" id="todo-input" placeholder="Study JavaScript">
+                </div>
+                <button onclick="addTodo()">Add Task</button>
+                <ul id="todo-list" class="todo-list"></ul>
+                <div class="stats">
+                    <span>Total Tasks: <span id="task-count">0</span></span>
+                    <span>Completed: <span id="completed-count">0</span></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Element Visibility Toggle</h3>
+                <button onclick="toggleContent()">Toggle Secret Content</button>
+                <div id="secret-content" class="secret-content">
+                    <h4>🎉 Congratulations!</h4>
+                    <p>You've successfully demonstrated DOM manipulation! This content was hidden and revealed using JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Display Console Output -->
+        <section class="section console-section">
+            <h2>📝 Console Output</h2>
+            <div class="card">
+                <p>Check your browser's developer console (F12) to see additional output from the JavaScript code!</p>
+                <button onclick="showConsoleDemo()">Run Console Demo</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
